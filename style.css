@@ -1,4 +1,3 @@
-@import "carrousel.css";
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -288,37 +287,12 @@ a.link-trello {
 }
 
 body.bg-mf {
-  background-image: url(../img/assets/backgrounds/megalos-background.png);
+  background-image: url(./img/assets/backgrounds/megalos-background.png);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
   top: 0px;
   left: 0px;
-}
-
-body.bg-nsa {
-  background-image: url(../img/assets/backgrounds/NSA-background.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-color: #000000;
-  top: 0px;
-  left: 0px;
-}
-
-body.bg-contact {
-  background-image: url(../img/assets/Head/head-contact.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-color: #000000;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-}
-
-main.m-nsa {
-  margin-top: 550px;
 }
 
 div.card-top-mf {
