@@ -21,15 +21,7 @@
                 "maxIndexSize": 1000000
             },
             "search": {},
-            "sharing": {
-                "all": ["facebook", "google", "twitter", "weibo", "instapaper"],
-                "facebook": false,
-                "google": false,
-                "instapaper": false,
-                "twitter": false,
-                "vk": false,
-                "weibo": false
-            },
+            "sharing": {},
             "theme-default": {
                 "showLevel": false,
                 "styles": {
