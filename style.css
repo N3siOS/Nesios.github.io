@@ -1,31 +1,595 @@
-#mySidebar a {
-  margin-top: 150px;
-  position: absolute;
-  left: -98px;
-  transition: 0.2s;
-  padding: 15px;
-  width: 100px;
-  text-decoration: none;
-  font-size: 1.3em;
-  color: #555;
-  border-radius: 0 5px 5px 0;
-  border: #555 solid 1px;
-  background-color: #555;
+@import "carrousel.css";
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-#mySidebar a:hover {
-  left: 0;
-  background-color: white;
-  color: #555;
+
+html, body, div, span, applet, object,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+  color: #FFF;
 }
-#option1 {
-  top: 20px;
+
+html {
+  z-index: 0;
+  background-color: #131416;
+  background-size: cover;
+  font-family: "arial", "lato", "sherif";
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
-#option2 {
-  top: 80px;
+
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  top: 0;
+  z-index: 100;
+  left: 20px;
+  padding: 0px 0 0px 20px;
+  font-size: 15px;
+  font-style: bold;
+  box-shadow: 0 1px 16px rgba(0, 0, 0, 0.4);
 }
-#option3 {
-  top: 140px;
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
-#option4 {
+
+main {
+  padding-top: 2%;
+  margin: 10px;
+  left: 250px;
+  top: 0;
+}
+
+main.contact {
   top: 200px;
+  left: auto;
+  margin-top: 550px;
 }
+
+footer {
+  align-items: center;
+  justify-content: bottom;
+  display: contents;
+  overflow: hidden;
+}
+
+div.changelog {
+  width: 70%;
+  left: 0;
+  top: 10px;
+  margin-top: 50px;
+  margin-left: 16%;
+  color: black;
+}
+
+.footer p {
+  padding-top: 5px;
+  font-weight: 200;
+  font-size: 1.1em;
+  text-align: center;
+  transition: 0.2s;
+  padding-bottom: 3px;
+  color: #3b3b3b;
+}
+
+p.footer-alt {
+  padding-top: 5px;
+  font-weight: 200;
+  font-size: 1.1em;
+  text-align: center;
+  transition: 0.2s;
+  padding-bottom: 3px;
+  color: #dddddd;
+}
+
+p.subfooter-alt {
+  font-size: 0.8em;
+  color: #dddddd;
+}
+
+.subfooter p {
+  font-size: 0.8em;
+}
+
+.footer img {
+  padding-top: 5px;
+  width: 85%;
+  margin-left: 8%;
+  bottom: 0px;
+  transition: 0.2s;
+  padding-bottom: 3px;
+}
+
+nav {
+  display: inline-block;
+  vertical-align: bottom;
+  padding-bottom: 10px;
+}
+
+ul {
+  display: inline;
+}
+
+li.pagelink {
+  margin-left: 32px;
+  display: inline;
+}
+
+li a, .button {
+  text-decoration: none;
+  color: #FFF;
+}
+
+img.navimg {
+  top: 0px;
+  left: auto;
+  width: 110px;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.card {
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: auto;
+  color: #fff;
+  display: contents;
+  overflow: hidden;
+}
+
+.card h1 {
+  font-weight: 400;
+  font-size: 2.7em;
+  text-align: center;
+  transition: 0.2s;
+  padding-bottom: 15px;
+}
+
+img.card-img {
+  display: inline;
+  width: 70%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 25%;
+}
+
+img.head-img {
+  display: inline;
+  width: 90%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 5%;
+}
+
+.card p {
+  font-weight: 400;
+  font-size: 1.6em;
+  color: #fff;
+  text-align: center;
+  transition: 0.2s;
+  padding: 20px;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+.card ul {
+  font-weight: 400;
+  font-size: 1.4em;
+  transition: 0.2s;
+  list-style: none;
+  text-align: center;
+}
+
+h1.chang-title {
+  font-weight: 400;
+  font-size: 2.7em;
+  color: #fff;
+  text-align: center;
+  transition: 0.2s;
+  padding-bottom: 10px;
+}
+
+p.lead {
+  font-size: 1.5em;
+  line-height: 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #fff;
+  text-align: center;
+  transition: 0.2s;
+  padding: 20px;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+p.sub-lead {
+  font-size: 1.2em;
+  font-style: italic;
+  color: #b1b0b0;
+  text-align: center;
+  transition: 0.2s;
+  padding: 20px;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+p.warning {
+  font-size: 1.1em;
+  line-height: 25px;
+  color: #ad1805;
+  text-align: center;
+  transition: 0.2s;
+  padding: 20px;
+  margin-right: 8%;
+  margin-left: 8%;
+}
+
+a.social-brand {
+  padding-left: 15px;
+}
+
+a.social-brand.twitter {
+  color: #389bcc;
+}
+
+a.social-brand.twitter:hover {
+  color: #15d0e9;
+}
+
+a.social-brand.github {
+  color: #b3b3b3;
+}
+
+a.social-brand.github:hover {
+  color: #f0eded;
+}
+
+a.social-brand.twitch {
+  color: #4b367c;
+}
+
+a.social-brand.twitch:hover {
+  color: #6b51a6;
+}
+
+a.link-pack-faithful {
+  color: #71b1c5;
+}
+
+a.link-pack-sama {
+  color: #d82303;
+}
+
+a.link-trello {
+  color: #4089e9;
+}
+
+body.bg-mf {
+  background-image: url(../img/assets/backgrounds/megalos-background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  top: 0px;
+  left: 0px;
+}
+
+body.bg-nsa {
+  background-image: url(../img/assets/backgrounds/NSA-background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #000000;
+  top: 0px;
+  left: 0px;
+}
+
+body.bg-contact {
+  background-image: url(../img/assets/Head/head-contact.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #000000;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+}
+
+main.m-nsa {
+  margin-top: 550px;
+}
+
+div.card-top-mf {
+  transition: 0.2s;
+  padding: 20px;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 370px;
+}
+
+#hamburger, #hamburger-content {
+  display: inline;
+}
+
+#hamburger-button {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  padding: 0;
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px;
+}
+
+#hamburger-overlay {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#hamburger-sidebar {
+  display: none;
+  position: fixed;
+  width: 80%;
+  z-index: 20;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-out;
+}
+
+#hamburger-sidebar li {
+  margin-top: 10px;
+  display: block;
+  font-size: 1.6rem;
+}
+
+/*#hamburger-sidebar-body li:before{
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 4px;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+}*/
+#hamburger-sidebar-header {
+  height: 52px;
+}
+
+#hamburger-sidebar-body {
+  padding-top: 20px;
+}
+
+#autogrid {
+  /*conteneur*/
+  margin-bottom: 30px;
+  margin-left: 28%;
+}
+
+#autogrid .autog-item {
+  /* conteneur img */
+  display: inline-block;
+  justify-content: center;
+  margin: 10px 0.8%;
+  padding-top: 2%;
+  width: 23%;
+}
+
+#autogrid .autog-item img {
+  width: 95%;
+  height: auto;
+  border: 0.8px inset #601515;
+}
+
+#autogrid .autog-item img:hover {
+  transition: 0.1s;
+  border: 0.8px inset #fff01c;
+}
+
+#autoren {
+  /*conteneur*/
+  margin-bottom: 40px;
+}
+
+#autoren .autor-item {
+  /* conteneur img */
+  display: inline-block;
+  justify-content: center;
+  margin: 10px 0.8%;
+  padding-top: 2%;
+  padding-left: 1%;
+  width: 23%;
+}
+
+#autoren .autor-item img {
+  width: 100%;
+  height: auto;
+  transition: 0.2s;
+}
+
+#autoren .autor-item img:hover {
+  width: 102%;
+  height: 10%;
+  transition: 0.3s;
+}
+
+.carousel-inner img {
+  width: 100%;
+  /* Set width to 100% */
+  margin: auto;
+  min-height: 200px;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+  }
+}
+/*Responsive*/
+@media (max-width: 375px) {
+  .card div.social-container {
+    display: inline-flex;
+    margin-top: 50%;
+    width: 40%;
+  }
+
+  h1.title {
+    font-size: 2em;
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  p.lead {
+    font-size: 1em;
+  }
+
+  img.nesios {
+    position: absolute;
+    width: 100%;
+    top: 20px;
+  }
+
+  img.avatar {
+    width: inherit;
+    margin-left: 10%;
+  }
+
+  a.social-brand {
+    padding: 3px;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    margin: 0px;
+  }
+
+  div.card-top-mf {
+    margin-top: 120px;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .card {
+    display: flex;
+    margin-bottom: -10px;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  p.lead {
+    font-size: 1em;
+    line-height: 20px;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 0%;
+  }
+
+  p.sub-lead {
+    font-size: 0.9em;
+  }
+
+  p.warning {
+    font-size: 0.9em;
+    margin: 0%;
+    line-height: 1.1;
+    padding: 0%;
+  }
+
+  .card h1 {
+    font-weight: 600;
+    font-size: 2em;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.78);
+    text-align: left;
+    margin-left: 0px;
+    transition: 0.2s;
+  }
+
+  img.avatar {
+    margin-left: -8%;
+    left: 0;
+  }
+
+  #autogrid {
+    margin-left: 0%;
+    margin-bottom: 0%;
+  }
+
+  #autogrid .autog-item {
+    width: 32%;
+    margin: 0%;
+  }
+
+  #autogrid .autog-item img {
+    width: 96%;
+    height: auto;
+    padding-left: 10%;
+  }
+
+  .card div.social-container {
+    width: 55%;
+    height: 40px;
+    margin-left: -100px;
+  }
+
+  a.social-brand {
+    padding: 4%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 42px;
+    line-height: 56px;
+  }
+
+  #hamburger-content {
+    display: none;
+  }
+
+  #hamburger-button, #hamburger-sidebar,
+.hamburger-activated #hamburger-overlay {
+    display: block;
+  }
+
+  .hamburger-activated #hamburger-sidebar {
+    transform: translateX(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
